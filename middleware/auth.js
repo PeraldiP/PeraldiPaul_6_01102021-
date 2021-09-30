@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 module.exports = (req, res, next) => {
     try {
@@ -13,4 +14,4 @@ module.exports = (req, res, next) => {
     } catch (error) {
         res.status(401).json({error : error | 'Requête non authentifiée !'});
     }
-}
+};
